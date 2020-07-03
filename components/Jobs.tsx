@@ -19,9 +19,9 @@ const Jobs: React.FC<JobsProps> = ({
 
       <ul className="big-list">
         {
-          myJobs && myJobs.map((work) => {
+          myJobs && myJobs.map((work, index) => {
             return (
-              <li>
+              <li key={`${work.name}_${index}`}>
                 <a href={work.url} target="_blank" rel="noopener noreferrer">
                   {work.name}
                 </a>

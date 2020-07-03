@@ -27,9 +27,9 @@ const Works: React.FC<WorksProps> = ({
 
         <ul className="big-list">
           {
-            myWorks && myWorks.map((work) => {
+            myWorks && myWorks.map((work, index) => {
               return (
-                <li>
+                <li key={`${work.title}_${index}`}>
                   {
                     work.source && (
                       <a

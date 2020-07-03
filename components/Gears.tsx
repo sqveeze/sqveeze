@@ -23,9 +23,9 @@ const Works: React.FC<WorksProps> = ({
 
         <ul className="big-list">
           {
-            myGears && myGears.map((gear) => {
+            myGears && myGears.map((gear, index) => {
               return (
-                <li>
+                <li key={`${gear.title}_${index}`}>
                   <span className="comment">
                     {' '}
                     {gear.title}
