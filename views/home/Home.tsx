@@ -17,7 +17,7 @@ const Home: React.FC<HomeProps> = ({
   openSource,
 }): JSX.Element => {
   return (
-    <PageWrapper>
+    <React.Fragment>
       <div className="container mx-auto">
         <div className="row">
           <div className="col-12">
@@ -40,92 +40,91 @@ const Home: React.FC<HomeProps> = ({
           </div>
         </div>
       </div>
-    </PageWrapper>
+      <style jsx global>{`
+        /* General */
+
+        ul, li {
+          list-style: none;
+        }
+      
+        strong {
+          font-weight: normal;
+          color: #CC7832;
+        }
+      
+        a {
+          color: #A5C25C;
+          text-decoration: none;
+          text-shadow: 1px 1px 0 #2B2B2B, -1px 1px 0 #2B2B2B, 2px 0 0 #2B2B2B, -2px 0 0 #2B2B2B;
+          box-shadow: inset 0 -1px 0 0 #2B2B2B, inset 0 -2px 0 0 #A5C25C;
+        }
+      
+        /* Headings */
+      
+        h1 {
+          font-size: 14px;
+          color: #FFC66D;
+          margin-bottom: 16px;
+          font-weight: normal;
+        }
+      
+        h1:before {
+          content: '/* ';
+        }
+      
+        h1:after {
+          content: ' */';
+        }
+      
+        /* Text */
+      
+        p {
+          margin-left: 25px;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          text-align: justify;
+        }
+      
+        /* "Comment"-style texts */
+      
+        .comment {
+          color: #808080;
+        }
+      
+        .comment:before {
+          content: '[';
+        }
+      
+        .comment:after {
+          content: ']';
+        }
+      
+        /* Lists */
+      
+        ul {
+          margin-left: 25px;
+          margin-top: 16px;
+          margin-bottom: 16px;
+        }
+      
+        li:before {
+          content: '- ';
+        }
+      
+        /* Mobile */
+      
+        @media (max-width: 700px) {
+          p, ul, .project-description {
+            margin-left: 0px;
+          }
+      
+          ul.big-list li {
+            margin-bottom: 16px;
+          }
+        }
+      `}</style>
+    </React.Fragment>
   );
 };
-
-const PageWrapper = styled.div`
-  /* General */
-
-  ul, li {
-    list-style: none;
-  }
-
-  strong {
-    font-weight: normal;
-    color: #CC7832;
-  }
-
-  a {
-    color: #A5C25C;
-    text-decoration: none;
-    text-shadow: 1px 1px 0 #2B2B2B, -1px 1px 0 #2B2B2B, 2px 0 0 #2B2B2B, -2px 0 0 #2B2B2B;
-    box-shadow: inset 0 -1px 0 0 #2B2B2B, inset 0 -2px 0 0 #A5C25C;
-  }
-
-  /* Headings */
-
-  h1 {
-    font-size: 14px;
-    color: #FFC66D;
-    margin-bottom: 16px;
-    font-weight: normal;
-  }
-
-  h1:before {
-    content: '/* ';
-  }
-
-  h1:after {
-    content: ' */';
-  }
-
-  /* Text */
-
-  p {
-    margin-left: 25px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    text-align: justify;
-  }
-
-  /* "Comment"-style texts */
-
-  .comment {
-    color: #808080;
-  }
-
-  .comment:before {
-    content: '[';
-  }
-
-  .comment:after {
-    content: ']';
-  }
-
-  /* Lists */
-
-  ul {
-    margin-left: 25px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-
-  li:before {
-    content: '- ';
-  }
-
-  /* Mobile */
-
-  @media (max-width: 700px) {
-    p, ul, .project-description {
-      margin-left: 0px;
-    }
-
-    ul.big-list li {
-      margin-bottom: 16px;
-    }
-  }
-`;
 
 export default Home;
