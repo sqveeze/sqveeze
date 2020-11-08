@@ -6,7 +6,7 @@ const Contact = () => {
       <h1>🤝 Let's connect?</h1>
 
       <p>
-        If you would you like to know more my availability for a project, app, drop me an email, or write at any of:
+        If you would you like to know more about my availability for a project or app, drop me an email, or write a message at any of:
       </p>
 
       <ul>
