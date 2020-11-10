@@ -19,14 +19,18 @@ const Jobs: React.FC<JobsProps> = ({
 
       <ul className="big-list">
         {
-          myJobs && myJobs.map((work, index) => {
+          myJobs && myJobs.map((job, index) => {
             return (
-              <li key={`${work.name}_${index}`}>
-                <a href={work.url} target="_blank" rel="noopener noreferrer">
-                  {work.name}
-                </a>
+              <li key={`${job.name}_${index}`}>
+                <span className="comment">{job.period}</span>
                 {' '}
-                <span className="comment">{work.period}</span>
+                {job.position}
+                {' '}
+                @
+                {' '}
+                <a href={job.url} target="_blank" rel="noopener noreferrer">
+                  {job.name}
+                </a>
               </li>
             )
           })
