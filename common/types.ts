@@ -1,6 +1,7 @@
 export interface Job {
   name: string;
   url: string;
+  position: string;
   period: string;
 }
 
