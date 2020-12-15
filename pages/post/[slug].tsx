@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import SyntaxHighlighter from 'react-syntax-highlighter';
