@@ -35,7 +35,7 @@ const Post = ({ post, morePosts, preview }) => {
         <Link href="/"><a>Go back</a></Link>
       </p>
       
-      <ArticleStyles>
+      {/* <ArticleStyles>
         <Head>
           <title>
             {post.content.title}
@@ -82,16 +82,17 @@ const Post = ({ post, morePosts, preview }) => {
             }
           })
         }
-        {/* <PostHeader
+        
+      </ArticleStyles> */}
+      {/* <SectionSeparator /> */}
+      {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+      {/* <PostHeader
           title={post.content.title}
           coverImage={post.content.image}
           date={post.first_published_at || post.published_at}
           author={post.content.author}
         />
         <PostBody content={post.html} /> */}
-      </ArticleStyles>
-      {/* <SectionSeparator /> */}
-      {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
     </div>
   )
 }
