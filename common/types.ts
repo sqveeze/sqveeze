@@ -36,4 +36,5 @@ export interface HomeProps {
   myWorks: Work[];
   myGears: Gear[];
   openSource: OpenSource;
+  articles: any[];
 }

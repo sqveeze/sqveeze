@@ -1,52 +1,72 @@
 import { GetStaticProps } from 'next';
-
 import React from 'react';
 
 import Page from '../views/home/Home';
+import { Job, Work, OpenSourceItem, Gear, HomeProps} from "../common/types";
+import { getAllPostsForHome } from '../lib/api'
 
-import { Job, Work, OpenSourceItem, Gear} from "../common/types";
+const Home = (props: JSX.IntrinsicAttributes & HomeProps & { children?: React.ReactNode; }) => <Page {...props} />;
 
-const Home = props => <Page {...props} />;
+export const getStaticProps: GetStaticProps = async ({ preview }) => {
+  const articles = (await getAllPostsForHome(preview)) || []
 
-export const getStaticProps: GetStaticProps = async () => {
   const jobs: Job[] = [{
     name: 'FInno Consult GmbH.',
     url: 'https://finnoconsult.at',
+    position: 'Full-Stack Developer',
     period: '2020 april - present',
+  }, {
+    name: 'Freelancer',
+    url: '#',
+    position: 'Full-Stack Developer',
+    period: '2019 april - 2020 april'
   }, {
     name: 'CodeYard Kft.',
     url: 'https://codeyard.eu',
+    position: 'Front-end Developer',
     period: '2018 april - 2019 april',
   }, {
     name: 'Kulcs-Soft Nyrt.',
     url: 'https://kulcs-soft.hu',
+    position: 'Front-end Developer / Software Tester',
     period: '2016 august - 2017 april',
   }];
 
   const works: Work[] = [{
-    title: 'This website',
-    link: 'https://sqveeze.hu',
-    stack: 'NextJS, React, Typescript',
-    source: 'https://github.com/Sqveeze/sqveeze',
+    title: '500 Méter',
+    link: 'https://500meter.dogpaw.io',
+    stack: 'React, Typescript, HERE Maps',
   }, {
     title: 'Dogpaw.io (Under development)',
     link: 'https://dogpaw.io',
     stack: 'NodeJS, Strapi, NextJS, React, React Native, Typescript, Postgres, GraphQL'
+  }, {
+    title: 'This website',
+    link: 'https://sqveeze.hu',
+    stack: 'NextJS, React, Typescript, Storyblok',
+    source: 'https://github.com/Sqveeze/sqveeze',
   }];
 
-  const openSourceProjects: OpenSourceItem[] = [{
-    title: 'Szépségvarázs Hajdúböszörmény',
-    link: 'https://szepsegvarazs-hb.hu',
-    stack: 'NextJS(Static), Typescript, Vercel\'s serverless functions',
+  const openSourceProjects: OpenSourceItem[] = [
+  // {
+  // title: 'Szépségvarázs Hajdúböszörmény',
+  // link: 'https://szepsegvarazs-hb.hu',
+  // stack: 'NextJS(Static), Typescript, Vercel\'s serverless functions',
+  // },
+  {
+    title: 'Finnoconsult Website',
+    link: 'https://finnoconsult.at',
+    via: '@Finno Consult',
+    stack: 'Gatsby, React, Typescript, GitHub Actions, NodeJS, Strapi, Postgres'
   }, {
     title: 'ADAC Openhouse',
     link: 'https://schluessel.adac.de',
-    via: 'JavaScript Developer @FInno Consult',
+    via: '@Finno Consult',
     stack: 'NodeJS, Koa, React, Typescript, Inversify, Postgres',
   }, {
     title: 'FInno Blog',
     link: 'https://blog.finnoconsult.at',
-    via: 'JavaScript Developer @FInno Consult',
+    via: '@Finno Consult',
     stack: 'NodeJS, Strapi, React, Typescript, Postgres, Metalsmith',
   }, {
     title: '6forint',
@@ -66,17 +86,18 @@ export const getStaticProps: GetStaticProps = async () => {
   }, {
     title: 'BizXpert',
     link: 'https://bizxpert.hu',
-    via: 'Front-end developer @Kulcs-Soft',
+    via: '@Kulcs-Soft',
     stack: 'HTML(Jade), CSS(SASS), JS(CoffeeScript), Gulp',
   }, {
     title: 'Kulcs webshop',
     link: 'https://kulcs-soft.hu',
-    via: 'Front-end developer @Kulcs-Soft',
+    via: '@Kulcs-Soft',
     stack: 'HTML, CSS, JavaScript, jQuery',
   }, {
     title: 'Kulcs Soft website',
     link: 'https://kulcs-soft.hu',
-    via: 'Software Tester @Kulcs-Soft',
+    via: '@Kulcs-Soft',
+    stack: 'Testing',
   }, {
     text: '...and the rest (over 30 in total with the above), which i am not able to talk about because of laws 😬 Not sure the above are premitted tho. 😂',
   }];
@@ -84,7 +105,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const openSourceContributions: OpenSourceItem[] = [{
     title: 'Strapi',
     link: 'https://github.com/team-appforge/strapi-provider-upload-scaleway',
-    text: 'Scaleway upload provider for Strapi. Scaleway is cloud provider that offers block storage.',
+    text: 'Scaleway upload provider for Strapi. Scaleway is a cloud provider which offers block storage.',
   }];
 
   const myGears: Gear[] = [{
@@ -124,6 +145,7 @@ export const getStaticProps: GetStaticProps = async () => {
         contributions: [...openSourceContributions],
       },
       myGears: [...myGears],
+      articles,
     },
   };
 }

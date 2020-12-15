@@ -1,6 +1,8 @@
 import React  from 'react';
+import { Heading, Text, Link, List, ListItem } from '@chakra-ui/react';
 
 import { Work } from '../common/types';
+import styles from './sections/styles';
 
 interface WorksProps {
   myWorks: Work[];
@@ -11,55 +13,57 @@ const Works: React.FC<WorksProps> = ({
 }): JSX.Element => {
     return (
       <section>
-        <h1 className="first">
+        <Heading variant="commentHeading">
           <span role="img" aria-label="package">📦</span>
           {' '}
           My latest works
-        </h1>
+        </Heading>
 
-        <p>
-          You can find latest works on my
+        <Text variant="codeText">
+          You can find my latest works on my
           {' '}
           <a href="https://github.com/Sqveeze/">GitHub</a>
           {' '}
           profile.
-        </p>
+        </Text>
 
-        <ul className="big-list">
+        <List 
+          sx={styles.list}
+        >
           {
             myWorks && myWorks.map((work, index) => {
               return (
-                <li key={`${work.title}_${index}`}>
+                <ListItem sx={styles.listItem} key={`${work.title}_${index}`}>
                   {
                     work.source && (
-                      <a
+                      <Link
+                        variant="codeLink"
                         href={work.source}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        isExternal
                       >
                         @
-                      </a>
+                      </Link>
                     )
                   }
-                  <a
+                  <Link
+                    variant="codeLink"
                     href={work.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    isExternal
                   >
                     {' '}
                     {work.title}
-                  </a>
+                  </Link>
                   {' '}
-                  <span className="comment">
+                  <span>
                     {' '}
                     {work.stack}
                     {' '}
                   </span>
-                </li>
+                </ListItem>
               )
             })
           }
-        </ul>
+        </List>
       </section>
     );
 }

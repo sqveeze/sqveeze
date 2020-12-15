@@ -1,6 +1,8 @@
 import React from 'react';
+import { Heading, Text, Link, List, ListItem } from '@chakra-ui/react';
 
 import { Job } from '../common/types';
+import styles from './sections/styles';
 
 interface JobsProps {
   myJobs: Job[];
@@ -11,31 +13,42 @@ const Jobs: React.FC<JobsProps> = ({
 }) => {
   return (
     <section>
-      <h1>👨🏻‍💻 Work history</h1>
+      <Heading variant="commentHeading" pt={4}>
+        <span role="img" aria-label="package">👨🏻‍💻</span>
+        {' '}
+        Work history
+      </Heading>
 
-      <p>
-        Currently, I am working as an Application Developer at an Austrian based company called FInno Consult. If you or any of your friend / colleagues needs innovation in your company, just give them a call.
-      </p>
+      <Text variant="codeText">
+        Currently, I am working as an Application Developer
+        at an Austrian based company called FInno Consult.
+        If you or any of your friend / colleagues needs innovation
+        in your company, just give them a call.
+      </Text>
 
-      <ul className="big-list">
+      <List sx={styles.list}>
         {
           myJobs && myJobs.map((job, index) => {
             return (
-              <li key={`${job.name}_${index}`}>
-                <span className="comment">{job.period}</span>
+              <ListItem sx={styles.listItem} key={`${job.name}_${index}`}>
+                <span>{job.period}</span>
                 {' '}
                 {job.position}
                 {' '}
                 @
                 {' '}
-                <a href={job.url} target="_blank" rel="noopener noreferrer">
+                <Link
+                  variant="codeLink"
+                  href={job.url}
+                  isExternal
+                >
                   {job.name}
-                </a>
-              </li>
+                </Link>
+              </ListItem>
             )
           })
         }
-      </ul>
+      </List>
 
     </section>
   );

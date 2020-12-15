@@ -1,6 +1,8 @@
 import React  from 'react';
+import { Heading, Text, Link, List, ListItem } from '@chakra-ui/react';
 
 import { Gear } from '../common/types';
+import styles from './sections/styles';
 
 interface WorksProps {
   myGears: Gear[];
@@ -11,39 +13,39 @@ const Works: React.FC<WorksProps> = ({
 }): JSX.Element => {
     return (
       <section>
-        <h1 className="first">
+        <Heading variant="commentHeading" pt={4}>
           <span role="img" aria-label="package">⚙️</span>
           {' '}
           My gears
-        </h1>
+        </Heading>
 
-        <p>
+        <Text variant="codeText">
           These stuffs powers my daily works.
-        </p>
+        </Text>
 
-        <ul className="big-list">
+        <List sx={styles.list}>
           {
             myGears && myGears.map((gear, index) => {
               return (
-                <li key={`${gear.title}_${index}`}>
+                <ListItem sx={styles.listItem} key={`${gear.title}_${index}`}>
                   <span className="comment">
                     {' '}
                     {gear.title}
                     {' '}
                   </span>
                   {' '}
-                  <a
+                  <Link
+                    variant="codeLink"
                     href={gear.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    isExternal
                   >
                     {gear.text}
-                  </a>
-                </li>
+                  </Link>
+                </ListItem>
               )
             })
           }
-        </ul>
+        </List>
       </section>
     );
 }

@@ -1,6 +1,8 @@
 import React  from 'react';
+import { Heading, Text, Link, List, ListItem } from '@chakra-ui/react';
 
 import { OpenSource } from '../common/types';
+import styles from './sections/styles';
 
 const Works: React.FC<OpenSource> = ({
   projects,
@@ -8,29 +10,29 @@ const Works: React.FC<OpenSource> = ({
 }): JSX.Element => {
     return (
       <section>
-        <h1 className="first">
+        <Heading variant="commentHeading" pt={4}>
           <span role="img" aria-label="under construction">🚧</span>
           {' '}
           Projects & Contributions
-        </h1>
+        </Heading>
 
-        <p>
+        <Text variant="codeText">
           Projects
-        </p>
+        </Text>
 
-        <ul className="big-list">
+        <List sx={styles.list}>
           {
             projects && projects.map((project, index) => {
               return (
-                <li key={`${project.title}_${index}`}>
-                  <a
+                <ListItem sx={styles.listItem} key={`${project.title}_${index}`}>
+                  <Link
+                    variant="codeLink"
                     href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    isExternal
                   >
                     {' '}
                     {project.title}
-                  </a>
+                  </Link>
                   {' '}
                   {project.via && project.via}
                   {' '}
@@ -43,40 +45,40 @@ const Works: React.FC<OpenSource> = ({
                       {' '}
                     </span>
                   )}
-                </li>
+                </ListItem>
               )
             })
           }
-        </ul>
+        </List>
 
-        <p>
+        <Text variant="codeText">
           Contributions
-        </p>
+        </Text>
 
-        <ul className="big-list">
+        <List sx={styles.list}>
           {
             contributions && contributions.map((contribution, index) => {
               return (
-                <li key={`${contribution.title}_${index}`}>
-                  <a
+                <ListItem sx={styles.listItem} key={`${contribution.title}_${index}`}>
+                  <Link
+                    variant="textLink"
                     href={contribution.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    isExternal
                   >
                     {' '}
                     {contribution.title}
-                  </a>
+                  </Link>
                   {' '}
-                  <span className="comment">
+                  <span>
                     {' '}
                     {contribution.text}
                     {' '}
                   </span>
-                </li>
+                </ListItem>
               )
             })
           }
-        </ul>
+        </List>
       </section>
     );
 }

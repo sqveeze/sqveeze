@@ -1,29 +1,23 @@
 import React from 'react';
-import Document, { DocumentContext } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import NextDocument, { Html, Head, NextScript, Main, DocumentContext } from 'next/document';
+import { ColorModeScript } from "@chakra-ui/react";
 
-export default class MyDocument extends Document {
-  static async getInitialProps (ctx: DocumentContext) {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
-    try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
-          enhanceComponent: Component => Component,
-        });
-      const initialProps = await Document.getInitialProps(ctx);
-      return {
-        ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        )
-      };
-    } finally {
-      sheet.seal();
-    }
+export default class MrkDocument extends NextDocument {
+  static getInitialProps(ctx: DocumentContext) {
+    return NextDocument.getInitialProps(ctx)
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head />
+        <body>
+          {/* 👇 Here's the script */}
+          <ColorModeScript initialColorMode="dark" />
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }
