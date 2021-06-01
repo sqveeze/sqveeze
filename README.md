@@ -38,7 +38,6 @@ Hi, my name is Mark, I’m an application developer from Debrecen, Hungary. I ha
 
 - React
 - NextJS
-- NestJS
 
 ###### Mobile:
 
