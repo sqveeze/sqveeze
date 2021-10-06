@@ -1,8 +1,6 @@
 ## Hello dev 👋
 
----
-
-Hi, my name is Mark, I’m an application developer from Debrecen, Hungary. I have over 10 year of experience in development (Started with PHP at age of 12)
+My name is Mark, I’m an application developer from Debrecen, Hungary. I have over 10 year of experience in development (Started with PHP at age of 12)
 
 - 🌐 [Website](https://sqveeze.hu) | My personal website
 - ☕️ [Ko-Fi](https://ko-fi.com/sqveeze) | Support me
@@ -46,4 +44,4 @@ Hi, my name is Mark, I’m an application developer from Debrecen, Hungary. I ha
 
 ---
 
-For more info and posts, visit me website.
+For more info and posts, visit my website.
