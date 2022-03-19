@@ -10,11 +10,11 @@ My name is Mark, I’m an application developer from Debrecen, Hungary. I have o
 
 - Typescript
 
-#### Inactive languages
+#### ⏸ Inactive languages
 
 - Javascript, Java, Kotlin, GO, Python, Swift, PHP
 
-#### Known technologies
+#### 💡 Known technologies
 
 ###### Backend (active):
 
