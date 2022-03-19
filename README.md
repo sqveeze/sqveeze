@@ -2,13 +2,11 @@
 
 My name is Mark, I’m an application developer from Debrecen, Hungary. I have over 10 year of experience in development.
 
----
-
-#### Current active stack
+#### 🚀 Current active stack
 
 - Typescript, NestJS, NextJS, React Native, AdonisJS, PostgreSQL
 
-#### Languages used on daily basis
+#### 💻 Languages used on daily basis
 
 - Typescript
 
@@ -24,7 +22,7 @@ My name is Mark, I’m an application developer from Debrecen, Hungary. I have o
 
 ###### Backend (inactive):
 
-- Django, Spring Boot, Gin, Laravel
+- Django, Spring Boot, Gin, Laravel, Strapi, Medusa
 
 ###### Frontend (active):
 
@@ -36,6 +34,6 @@ My name is Mark, I’m an application developer from Debrecen, Hungary. I have o
 
 ---
 
-#### My projects
+#### 📦 My projects
 
 [Stats Upland](https://stats-up.land) - Statistics website for NFT game called Upland. Visitors can browse statistics for each city, list properties and get more info about them. Limitations applied by the host API from Upland.
