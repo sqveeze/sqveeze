@@ -26,7 +26,7 @@ My name is Mark, I’m an application developer from Debrecen, Hungary. I have o
 
 ###### Frontend (active):
 
-- React, NextJS, MantineUI
+- React, React Native, NextJS, MantineUI
 
 ###### Frontend (inactive):
 
