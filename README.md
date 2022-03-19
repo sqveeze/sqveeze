@@ -16,21 +16,17 @@ My name is Mark, I’m an application developer from Debrecen, Hungary. I have o
 
 #### 💡 Known technologies
 
-###### Backend (active):
+- ###### Backend (active):
+  - NestJS, AdonisJS
 
-- NestJS, AdonisJS
+- ###### Backend (inactive):
+  - Django, Spring Boot, Gin, Laravel, Strapi, Medusa
 
-###### Backend (inactive):
+- ###### Frontend (active):
+  - React, React Native, NextJS, MantineUI
 
-- Django, Spring Boot, Gin, Laravel, Strapi, Medusa
-
-###### Frontend (active):
-
-- React, React Native, NextJS, MantineUI
-
-###### Frontend (inactive):
-
-- Create React App (CRA), ChakraUI
+- ###### Frontend (inactive):
+  - Create React App (CRA), ChakraUI
 
 ---
 
