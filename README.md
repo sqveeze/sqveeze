@@ -1,47 +1,41 @@
 ## Hello dev 👋
 
-My name is Mark, I’m an application developer from Debrecen, Hungary. I have over 10 year of experience in development (Started with PHP at age of 12)
-
-- 🌐 [Website](https://sqveeze.hu) | My personal website
-- ☕️ [Ko-Fi](https://ko-fi.com/sqveeze) | Support me
-- 🏢 [Appforge](https://appforge.hu) | My own company's website
+My name is Mark, I’m an application developer from Debrecen, Hungary. I have over 10 year of experience in development.
 
 ---
 
-#### Known languages
+#### Current active stack
 
-- Javascript
+- Typescript, NestJS, NextJS, React Native, AdonisJS, PostgreSQL
+
+#### Languages used on daily basis
+
 - Typescript
-- NodeJS
-- Python
-- Swift
-- GO
-- Java
-- Kotlin
 
----
+#### Inactive languages
+
+- Javascript, Java, Kotlin, GO, Python, Swift, PHP
 
 #### Known technologies
 
-###### Backend:
+###### Backend (active):
 
-- NestJS
-- Koa
-- Strapi
-- Django
-- Gin
-- Spring Boot
+- NestJS, AdonisJS
 
-###### Frontend:
+###### Backend (inactive):
 
-- React
-- NextJS
+- Django, Spring Boot, Gin, Laravel
 
-###### Mobile:
+###### Frontend (active):
 
-- React Native (iOS)
-- Swift UI
+- React, NextJS, MantineUI
+
+###### Frontend (inactive):
+
+- Create React App (CRA), ChakraUI
 
 ---
 
-For more info and posts, visit my website.
+#### My projects
+
+[Stats Upland](https://stats-up.land) - Statistics website for NFT game called Upland. Visitors can browse statistics for each city, list properties and get more info about them. Limitations applied by the host API from Upland.
