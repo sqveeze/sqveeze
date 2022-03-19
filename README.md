@@ -12,7 +12,7 @@ My name is Mark, I’m an application developer from Debrecen, Hungary. I have o
 
 #### ⏸ Inactive languages
 
-- Javascript, Java, Kotlin, GO, Python, Swift, PHP
+- Rust, Javascript, Java, Kotlin, GO, Python, Swift, PHP
 
 #### 💡 Known technologies
 
