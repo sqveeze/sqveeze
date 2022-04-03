@@ -35,3 +35,7 @@ My name is Mark, I’m an application developer from Debrecen, Hungary. I have o
 [Stats Upland](https://stats-up.land) - [NestJS, NextJS, PostgreSQL, Redis] - Statistics website for NFT game called Upland. Visitors can browse statistics for each city, list properties and get more info about them. Limitations applied by the host API from Upland.
 
 [Kutyával](https://kutyaval.hu) (Under development) - Directory listing website where you can search, find, filter, sort places and events where you can bring your dog with you. Also there will be claiming, payments, and review features.
+
+---
+
+![Márk's GitHub stats](https://github-readme-stats.vercel.app/api?username=sqveeze&show_icons=true&theme=dark)
