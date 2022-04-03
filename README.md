@@ -32,7 +32,7 @@ My name is Mark, I’m an application developer from Debrecen, Hungary. I have o
 
 #### 📦 My projects
 
-[Stats Upland](https://stats-up.land) - [NestJS, NextJS, PostgreSQL, Redis] - Statistics website for NFT game called Upland. Visitors can browse statistics for each city, list properties and get more info about them. Limitations applied by the host API from Upland.
+[Stats Upland](https://stats-up.land) - [NestJS, NextJS, PostgreSQL, Redis] (Stable: V1, Ongoing: V1 Refactor) - Statistics website for NFT game called Upland. Visitors can browse statistics for each city, list properties and get more info about them. Limitations applied by the host API from Upland.
 
 [Rush Royale Decks (RR Decks)](https://rrdecks.win) (Under development) - [AdonisJS, NextJS, PostgreSQL, Redis] - Deck share community website for Rush Royale mobile tower defense game.
 
